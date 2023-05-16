@@ -18,17 +18,14 @@
     "workflowRules": {
       "enabled": true,
       "minVulnerabilitySeverity": "LOW"
+      "enableRenovate": true
+      "dependencyDashboard": true,
     },
     "extends": ["github>whitesource/merge-confidence:beta"]
   },
   "leastVulnerablePackageSettings": {                 
     "enabled": true     
     },
-     "enableRenovate": true,
-    "dependencyDashboard": true,
-    "extends": [
-      "config:base",
-      "github>whitesource/merge-confidence:beta"
       ]
   }
 
