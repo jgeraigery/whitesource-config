@@ -21,9 +21,9 @@
       "enableRenovate": true,
       "dependencyDashboard": true,
       "extends": ["github>whitesource/merge-confidence:beta"]
-  },
+    },
   "leastVulnerablePackageSettings": {                 
     "enabled": true     
-    },
+    }
   }
 
