@@ -17,11 +17,10 @@
   "remediateSettings": {
     "workflowRules": {
       "enabled": true,
-      "minVulnerabilitySeverity": "LOW",
-      "enableRenovate": true,
-      "dependencyDashboard": true,
-      "extends": ["github>whitesource/merge-confidence:beta"]
-    }
+      "minVulnerabilitySeverity": "LOW"
+    },
+    "enableRenovate": true,
+    "extends": ["config:base","github>whitesource/merge-confidence:beta"]
   },
   "leastVulnerablePackageSettings": {                 
     "enabled": true     
