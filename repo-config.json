@@ -24,6 +24,16 @@
   },
   "leastVulnerablePackageSettings": {                 
     "enabled": true     
-    }
+    },
+  {
+  "scanSettings": {
+    "enableIaC": true,
+    "baseBranches": ["integration"]
+  },
+  "checkRunSettings": {
+    "useMendCheckNames": true,
+    "iacCheckRunConclusionLevel": "failure"
+  }
+}
   }
 
