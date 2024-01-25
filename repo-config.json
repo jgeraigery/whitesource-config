@@ -1,14 +1,34 @@
-{ 
+{
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
-    "projectToken": "",
     "baseBranches": [],
-    "enableLicenseViolations": "true" 
+    "enableLicenseViolations": true,
+    "enableReachability": true
+  },
+  "scanSettingsSAST": {
+    "enableScan": true,
+    "scanPullRequests": true,
+    "incrementalScan": true,
+    "baseBranches": [],
+    "snippetSize": 10
+  },
+  "imageSettings": {
+    "imageTracing": {
+        "enableImageTracingPR": true,
+        "addDockerfilePath": true,
+        "addRepositoryCoordinates": true
+    }
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
-    "displayMode": "diff"
+    "displayMode": "diff",
+    "useMendCheckNames": true,
+    "strictMode": "warning"
+  },
+  "checkRunSettingsSAST": {
+    "checkRunConclusionLevel": "failure",
+    "severityThreshold": "high"
   },
   "issueSettings": {
     "minSeverityLevel": "LOW",
@@ -16,15 +36,17 @@
   },
   "remediateSettings": {
     "workflowRules": {
-      "enabled": true,
-      "minVulnerabilitySeverity": "LOW"
+      "enabled": true
     },
     "enableRenovate": true,
-    "extends": ["config:base","github>whitesource/merge-confidence:beta"]
+    "extends": [
+       "config:base",
+       "mergeConfidence:all-badges",
+       "github>mend-toolkit/mend-examples//Repo-Integration/Renovate/smart-merge"
+      ]
   },
-  "leastVulnerablePackageSettings": {                 
-    "enabled": true     
+  "leastVulnerablePackageSettings": {
+    "enabled": true
    }
 }
-  
 
